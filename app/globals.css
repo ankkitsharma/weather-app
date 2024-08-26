@@ -2,18 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-  }
-}
-
-body {
-}
-
 * {
   margin: 0;
   padding: 0;
+}
+
+@layer utilities {
+  @keyframes move-to-top {
+    0% {
+      top: 50%;
+    }
+    100% {
+      top: 4rem;
+    }
+  }
+  .animate-move-to-top {
+    animation: move-to-top 1s forwards, set-static 0s 1s forwards;
+  }
+
+  @keyframes set-static {
+    to {
+      position: static;
+      transform: none;
+      text-align: center;
+      margin-top: 1rem;
+      height: auto;
+    }
+  }
 }

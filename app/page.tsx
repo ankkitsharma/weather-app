@@ -1,7 +1,13 @@
 import Image from "next/image";
-
-import styles from "./page.module.css";
+import SearchBar from "@/components/SearchBar/SearchBar";
+import WeatherInfo from "@/components/WeatherInfo/WeatherInfo";
 
 export default function Home() {
-  return <div className={styles.mainContainer}></div>;
+  const locationSet = true;
+  return (
+    <div className="relative h-screen">
+      <SearchBar locationSet={locationSet} />
+      {locationSet && <WeatherInfo />}
+    </div>
+  );
 }

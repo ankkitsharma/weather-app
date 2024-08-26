@@ -17,10 +17,15 @@
 
 .clouds {
   padding: 100px 0;
+  height: 100%;
   background: var(--lightWeather);
-  background: -webkit-linear-gradient(top, var(--lightWeather) 0%, #fff 100%);
-  background: -linear-gradient(top, var(--lightWeather) 0%, #fff 100%);
-  background: -moz-linear-gradient(top, var(--lightWeather) 0%, #fff 100%);
+  background: -webkit-linear-gradient(
+    top,
+    var(--lightWeather) 0%,
+    #9bc7d5 100%
+  );
+  background: -linear-gradient(top, var(--lightWeather) 0%, #9bc7d5 100%);
+  background: -moz-linear-gradient(top, var(--lightWeather) 0%, #9bc7d5 100%);
 }
 
 /*Time to finalise the cloud shape*/
